@@ -2,7 +2,7 @@
 --- MOD_NAME: Milck QOL
 --- MOD_ID: milkqol
 --- MOD_AUTHOR: [Milck]
---- MOD_DESCRIPTION: Add keyboard shortcuts to the game
+--- MOD_DESCRIPTION: Add keyboard shortcuts to the game, tweaks done by Ender
 ----------------------------------------------
 ------------MOD CODE -------------------------
 local keyupdate_ref = Controller.key_press_update
@@ -13,18 +13,20 @@ function Controller.key_press_update(self, key, dt)
         ["2"] = 2,
         ["3"] = 3,
         ["4"] = 4,
-        ["5"] = 9,
-        ["q"] = 5,
-        ["w"] = 6,
-        ["e"] = 7,
-        ["r"] = 8,
-        ["t"] = 10
+        ["5"] = 5,
+        ["6"] = 6,
+        ["7"] = 7,
+        ["8"] = 8,
+        ["9"] = 9,
+        ["0"] = 10,
+        ["-"] = 11,
+        ["="] = 12
     }
     keys_to_ui = {
         ["z"] = "sort_value",
         ["x"] = "sort_rank",
-        ["return"] = "play_hand",
-        ["space"] = "discard_hand",
+        ["backspace"] = "play_hand",
+        ["return"] = "discard_hand",
         ["a"] = "run_info",
     }
     if G.STATE == G.STATES.SELECTING_HAND then
